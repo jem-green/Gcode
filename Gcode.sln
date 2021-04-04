@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcodeConsole", "GcodeConsole\GcodeConsole.csproj", "{64995B20-2F3E-4C38-8015-C9729025EF38}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcodeLibrary", "GcodeLibrary\GcodeLibrary.csproj", "{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thirdparty", "Thirdparty", "{8AB18983-7253-464A-8BAF-0D1E06327186}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4net", "log4net", "{4A8A4445-13FC-4996-8140-97CC33135279}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\log4net\log4net.dll = ThirdParty\log4net\log4net.dll
+		ThirdParty\log4net\log4net.xml = ThirdParty\log4net\log4net.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64995B20-2F3E-4C38-8015-C9729025EF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64995B20-2F3E-4C38-8015-C9729025EF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64995B20-2F3E-4C38-8015-C9729025EF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64995B20-2F3E-4C38-8015-C9729025EF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A8A4445-13FC-4996-8140-97CC33135279} = {8AB18983-7253-464A-8BAF-0D1E06327186}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF45AD84-C37E-4FD1-89D7-A47176A69D35}
+	EndGlobalSection
+EndGlobal
