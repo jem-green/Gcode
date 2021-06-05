@@ -18,7 +18,6 @@ namespace GcodeLibrary
             _word = WordType.P;
             _address = -1;
             _value = parameter;
-
         }
 
         public int Value

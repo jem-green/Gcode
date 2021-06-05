@@ -5,19 +5,19 @@ using System.Text;
 
 namespace GcodeLibrary
 {
-    public class A : Word
+    public class B : Word
     {
-        public A()
+        public B()
         {
-            _word = WordType.A;
+            _word = WordType.B;
             _address = -1;
 
         }
-        public X(double coordinate)
+        public B(double angle)
         {
             _word = WordType.X;
             _address = -1;
-            _value = coordinate;
+            _value = angle;
 
         }
         public double Angle

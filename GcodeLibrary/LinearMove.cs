@@ -3,47 +3,91 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
+using ShapeLibrary;
 
 namespace GcodeLibrary
 {
-    public class LinearMove : Word
+    public class LinearMove : Code
     {
-        public LinearMove() // G1
+        #region Fields
+        
+        #endregion
+        #region Constructor
+
+        public LinearMove(Point from, Point to) // G1
         {
             _word = WordType.G;
             _address = 1;
             _parameters = new Dictionary<WordType, Word>();
-            _parameters.Add(WordType.X, new X());
-            _parameters.Add(WordType.Y, new Y());
-            _parameters.Add(WordType.Z, new Z());
-            _parameters.Add(WordType.A, new A());
-            _parameters.Add(WordType.B, new B());
-            _parameters.Add(WordType.C, new C());
-
-            // could consider if any are optional or
-            // there should be at leaset one.
-        }
-
-        public LinearMove(Point from, Point to)
-        {
-            _word = WordType.G;
-            _address = 1;
-            _parameters = new Dictionary<WordType, Word>();
-            if (from.X)
-        }
-
-        public Parameter
-
-        public override string ToString()
-        {
-            StringBuilder gcode = new StringBuilder("G");
-            gcode.Append(_address);
-            foreach(KeyValuePair<WordType,Word> parameter in _parameters)
+            if (from.X != to.X)
             {
-                gcode.Append(parameter.ToString());
+                _parameters.Add(WordType.X, new X(to.X));
             }
-            return (gcode.ToString());
+            if (from.Y != to.Y)
+            {
+                _parameters.Add(WordType.Y, new Y(to.Y));
+            }
+            if (from.Z != to.Z)
+            {
+                _parameters.Add(WordType.Z, new Z(to.Z));
+            }
         }
-         
+
+        public LinearMove(Line line) // G1
+        {
+            _word = WordType.G;
+            _address = 1;
+            _parameters = new Dictionary<WordType, Word>();
+            if (line.From.X != line.To.X)
+            {
+                _parameters.Add(WordType.X, new X(line.To.X));
+            }
+            if (line.From.Y != line.To.Y)
+            {
+                _parameters.Add(WordType.Y, new Y(line.To.Y));
+            }
+            if (line.From.Z != line.To.Z)
+            {
+                _parameters.Add(WordType.Z, new Z(line.To.Z));
+            }
+        }
+
+        #endregion
+        #region Properties
+
+        public double X
+        {
+            get
+            {
+                return (_parameters[WordType.X].Value);
+            }
+            set
+            {
+                _parameters[WordType.X].Value = value;
+            }
+        }
+        public double Y
+        {
+            get
+            {
+                return (_parameters[WordType.Y].Value);
+            }
+            set
+            {
+                _parameters[WordType.Y].Value = value;
+            }
+        }
+        public double Z
+        {
+            get
+            {
+                return (_parameters[WordType.Z].Value);
+            }
+            set
+            {
+                _parameters[WordType.Z].Value = value;
+            }
+        }
+        #endregion
     }
 }

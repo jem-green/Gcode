@@ -7,18 +7,18 @@ namespace GcodeLibrary
 {
     public class O : Word
     {
-        public O()  // Program name
+        public O()  // dwell time in canned cycles
         {
             _word = WordType.O;
             _address = -1;
 
         }
 
-        public P(int parameter)  // Parameter
+        public O(int dwell)  // dwell time in canned cycles
         {
-            _word = WordType.P;
+            _word = WordType.O;
             _address = -1;
-            _value = parameter;
+            _value = dwell;
 
         }
 

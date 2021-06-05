@@ -41,7 +41,7 @@ namespace GcodeLibrary
         protected WordType _word = WordType.G;
         protected int _address = 0;
         protected Dictionary<WordType, Word> _parameters;
-        protected object _value;
+        protected double _value;
 
         #endregion
         #region Constructor
@@ -79,7 +79,10 @@ namespace GcodeLibrary
             }
         }
 
-        public object Value
+        /// <summary>
+        /// Specification indicates this is a duble
+        /// </summary>
+        public double Value
         {
             get
             {
@@ -92,6 +95,15 @@ namespace GcodeLibrary
         }
 
         #endregion
+        #region Methods
 
+        public override string ToString()
+        {
+            StringBuilder word = new StringBuilder(_word.ToString());
+            word.Append(_value);
+            return (word.ToString());
+        }
+
+        #endregion
     }
 }

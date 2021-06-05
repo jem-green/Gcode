@@ -13,11 +13,11 @@ namespace GcodeLibrary
             _address = -1;
 
         }
-        public C(double coordinate)
+        public C(double angle)
         {
             _word = WordType.X;
             _address = -1;
-            _value = coordinate;
+            _value = angle;
 
         }
         public double Angle

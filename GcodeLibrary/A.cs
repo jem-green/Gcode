@@ -5,15 +5,15 @@ using System.Text;
 
 namespace GcodeLibrary
 {
-    public class B : Word
+    public class A : Word
     {
-        public B()
+        public A()
         {
             _word = WordType.A;
             _address = -1;
 
         }
-        public B(double angle)
+        public A(double angle)
         {
             _word = WordType.A;
             _address = -1;

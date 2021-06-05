@@ -6,7 +6,7 @@ using System.Text;
 
 namespace GcodeLibrary
 {
-    public class Dwell : Word
+    public class Dwell : Code
     {
         #region Varaibles
         #endregion
@@ -18,34 +18,33 @@ namespace GcodeLibrary
             _address = 4;
             _parameters = new Dictionary<WordType, Word>();
             _parameters.Add(WordType.P, new P());  // miliseconds
-            _parameters.Add(WordType.S, new S());  // seconds
+            _parameters.Add(WordType.X, new S());  // seconds
 
             // S take presidence
         }
-        public Dwell(int parameter)  // G4
+        public Dwell(int miliseconds)  // G4
         {
             _word = Word.WordType.G;
             _address = 4;
             _parameters = new Dictionary<WordType, Word>();
-            _parameters.Add(WordType.P, new P(parameter));  // miliseconds
-            _parameters.Add(WordType.S, new S());           // seconds
+            _parameters.Add(WordType.P, new P(miliseconds));  // miliseconds
 
             // S take presidence
         }
-        public Dwell(int parameter, int Speed)  // G4
+        public Dwell(int miliseconds, int seconds)  // G4
         {
             _word = Word.WordType.G;
             _address = 4;
             _parameters = new Dictionary<WordType, Word>();
-            _parameters.Add(WordType.P, new P(parameter));  // miliseconds
-            _parameters.Add(WordType.S, new S(Speed));      // seconds
+            _parameters.Add(WordType.P, new P(miliseconds));  // miliseconds
+            _parameters.Add(WordType.X, new S(seconds));      // seconds
 
-            // S take presidence
+            // X take presidence
         }
 
         #endregion
         #region Properties
-        public int Parameter
+        public int Miliseconds
         {
             get
             {
@@ -56,15 +55,15 @@ namespace GcodeLibrary
                 _parameters[WordType.P].Value = value;
             }
         }
-        public int Speed
+        public int Seconds
         {
             get
             {
-                return ((int)_parameters[WordType.S].Value);
+                return ((int)_parameters[WordType.X].Value);
             }
             set
             {
-                _parameters[WordType.S].Value = value;
+                _parameters[WordType.X].Value = value;
             }
         }
 

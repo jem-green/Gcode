@@ -15,6 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4net", "log4net", "{4A8A
 		ThirdParty\log4net\log4net.xml = ThirdParty\log4net\log4net.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShaipeLibrary", "ShaipeLibrary", "{3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\ShapeLibrary\ShapeLibrary.dll = ThirdParty\ShapeLibrary\ShapeLibrary.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +40,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4A8A4445-13FC-4996-8140-97CC33135279} = {8AB18983-7253-464A-8BAF-0D1E06327186}
+		{3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3} = {8AB18983-7253-464A-8BAF-0D1E06327186}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF45AD84-C37E-4FD1-89D7-A47176A69D35}

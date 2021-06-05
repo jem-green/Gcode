@@ -16,6 +16,9 @@ namespace GcodeLibrary
             _parameters.Add(WordType.X, new X());
             _parameters.Add(WordType.Y, new Y());
             _parameters.Add(WordType.Z, new Z());
+            _parameters.Add(WordType.X, new A());
+            _parameters.Add(WordType.Y, new B());
+            _parameters.Add(WordType.Z, new C());
             _parameters.Add(WordType.R, new R());
 
             // could consider if any are optional or

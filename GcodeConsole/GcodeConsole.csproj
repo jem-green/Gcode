@@ -10,9 +10,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="DXFLibrary">
+      <HintPath>..\..\DXF\DXFLibrary\bin\Debug\netcoreapp3.1\DXFLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\ThirdParty\log4net\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="ShapeLibrary">
+      <HintPath>..\ThirdParty\ShapeLibrary\ShapeLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="test.dwg.dxf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test.dxf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
