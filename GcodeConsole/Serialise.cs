@@ -76,8 +76,6 @@ namespace GcodeConsole
         {
             Debug.WriteLine("In FromXML()");
             Gcode clean = null;
-            bool process = false;
-            string compiler = "";
 
             try
             {

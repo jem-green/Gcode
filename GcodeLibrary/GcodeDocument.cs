@@ -78,7 +78,7 @@ namespace GcodeLibrary
         {
             CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
             Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
-            bool versionwarningsent = false;
+            //bool versionwarningsent = false;
 
             // Work through the file and add the object structure
 
