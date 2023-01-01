@@ -4,6 +4,8 @@ using System.Text;
 using GcodeLibrary;
 using System.IO;
 using System.Xml;
+using TracerLibrary;
+using System.Diagnostics;
 
 namespace GcodeConsole
 {
@@ -72,7 +74,7 @@ namespace GcodeConsole
 
         public Gcode FromXML(string filename, string path)
         {
-            //log.Debug("In FromXML()");
+            Debug.WriteLine("In FromXML()");
             Gcode clean = null;
             bool process = false;
             string compiler = "";
@@ -198,8 +200,10 @@ namespace GcodeConsole
                                 case XmlNodeType.Attribute:
                                     break;
                                 default:
-                                    //log.Info(xmlReader.NodeType);
-                                    break;
+                                    {
+                                        Trace.TraceInformation(xmlReader.NodeType.ToString());
+                                        break;
+                                    }
 
                             }
                         }
@@ -209,26 +213,26 @@ namespace GcodeConsole
                     }
                     catch (Exception ex)
                     {
-                        //log.Warn("XML Error " + ex.Message);
+                        Trace.TraceWarning("XML Error " + ex.Message);
                     }
                     fs.Close();
                     fs.Dispose();   // Force the dispose as it was getting left open
                 }
                 catch (FileNotFoundException ex)
                 {
-                    //log.Warn("File Error " + ex.Message);
+                    Trace.TraceWarning("File Error " + ex.Message);
                 }
                 catch (Exception ex)
                 {
-                    //log.Warn("File Error " + ex.Message);
+                    Trace.TraceWarning("File Error " + ex.Message);
                 }
             }
             catch (Exception e)
             {
-                //log.Error("Other Error " + e.Message);
+                Trace.TraceError("Other Error " + e.Message);
             }
 
-            //log.Debug("Out FromXML()");
+            Debug.WriteLine("Out FromXML()");
             return (clean);
         }
         #endregion

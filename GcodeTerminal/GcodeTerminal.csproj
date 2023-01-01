@@ -1,16 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+    <ProjectReference Include="..\GcodeLibrary\GcodeLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="DXFLibrary">
-      <HintPath>..\..\DXF\DXFLibrary\bin\Debug\netcoreapp3.1\DXFLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\DXFLibrary\netcoreapp3.1\DXFLibrary.dll</HintPath>
     </Reference>
     <Reference Include="ShapeLibrary">
       <HintPath>..\ThirdParty\ShapeLibrary\ShapeLibrary.dll</HintPath>

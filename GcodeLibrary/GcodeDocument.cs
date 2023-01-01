@@ -18,7 +18,6 @@ namespace GcodeLibrary
         List<Code> _codes;
 
         #endregion
-
         #region Constructors
 
         public GcodeDocument()
@@ -50,7 +49,6 @@ namespace GcodeLibrary
         }
 
         #endregion
-
         #region Methods
 
         public void Add(Code code)

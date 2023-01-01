@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcodeConsole", "GcodeConsole\GcodeConsole.csproj", "{64995B20-2F3E-4C38-8015-C9729025EF38}"
 EndProject
@@ -9,15 +9,31 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcodeLibrary", "GcodeLibrar
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thirdparty", "Thirdparty", "{8AB18983-7253-464A-8BAF-0D1E06327186}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "log4net", "log4net", "{4A8A4445-13FC-4996-8140-97CC33135279}"
-	ProjectSection(SolutionItems) = preProject
-		ThirdParty\log4net\log4net.dll = ThirdParty\log4net\log4net.dll
-		ThirdParty\log4net\log4net.xml = ThirdParty\log4net\log4net.xml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShaipeLibrary", "ShaipeLibrary", "{3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShapeLibrary", "ShapeLibrary", "{3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3}"
 	ProjectSection(SolutionItems) = preProject
 		ThirdParty\ShapeLibrary\ShapeLibrary.dll = ThirdParty\ShapeLibrary\ShapeLibrary.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tracer", "Tracer", "{A73D01CA-8961-42FD-BA80-190249A6C53D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp3.1", "netcoreapp3.1", "{C01EE343-537A-45C8-B038-207E5457E865}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\TracerLibrary\netcoreapp3.1\TracerLibrary.dll = ThirdParty\TracerLibrary\netcoreapp3.1\TracerLibrary.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net452", "net452", "{C190ADE0-8262-4A0F-9614-44D1F48A84A9}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\TracerLibrary\net452\TracerLibrary.dll = ThirdParty\TracerLibrary\net452\TracerLibrary.dll
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcodeTest", "GcodeTest\GcodeTest.csproj", "{BD7448FD-7677-435E-BAE6-E853E37B03E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DXFLibrary", "DXFLibrary", "{C36FA11D-B9AB-48D8-B082-128F89E7B813}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp3.1", "netcoreapp3.1", "{C7A50B33-DE84-46FE-8283-44E5402A96C6}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\DXFLibrary\netcoreapp3.1\DXFLibrary.dll = ThirdParty\DXFLibrary\netcoreapp3.1\DXFLibrary.dll
+		ThirdParty\DXFLibrary\netcoreapp3.1\LoggerLibrary.dll = ThirdParty\DXFLibrary\netcoreapp3.1\LoggerLibrary.dll
 	EndProjectSection
 EndProject
 Global
@@ -34,13 +50,21 @@ Global
 		{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEB1572B-9080-4D4D-ABC2-E0D77B8F4586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7448FD-7677-435E-BAE6-E853E37B03E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7448FD-7677-435E-BAE6-E853E37B03E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7448FD-7677-435E-BAE6-E853E37B03E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7448FD-7677-435E-BAE6-E853E37B03E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4A8A4445-13FC-4996-8140-97CC33135279} = {8AB18983-7253-464A-8BAF-0D1E06327186}
 		{3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3} = {8AB18983-7253-464A-8BAF-0D1E06327186}
+		{A73D01CA-8961-42FD-BA80-190249A6C53D} = {8AB18983-7253-464A-8BAF-0D1E06327186}
+		{C01EE343-537A-45C8-B038-207E5457E865} = {A73D01CA-8961-42FD-BA80-190249A6C53D}
+		{C190ADE0-8262-4A0F-9614-44D1F48A84A9} = {A73D01CA-8961-42FD-BA80-190249A6C53D}
+		{C36FA11D-B9AB-48D8-B082-128F89E7B813} = {8AB18983-7253-464A-8BAF-0D1E06327186}
+		{C7A50B33-DE84-46FE-8283-44E5402A96C6} = {C36FA11D-B9AB-48D8-B082-128F89E7B813}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF45AD84-C37E-4FD1-89D7-A47176A69D35}

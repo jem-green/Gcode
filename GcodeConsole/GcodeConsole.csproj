@@ -13,11 +13,11 @@
     <Reference Include="DXFLibrary">
       <HintPath>..\..\DXF\DXFLibrary\bin\Debug\netcoreapp3.1\DXFLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\ThirdParty\log4net\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="ShapeLibrary">
       <HintPath>..\ThirdParty\ShapeLibrary\ShapeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="TracerLibrary">
+      <HintPath>..\ThirdParty\TracerLibrary\netcoreapp3.1\TracerLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 

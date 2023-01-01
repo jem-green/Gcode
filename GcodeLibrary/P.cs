@@ -20,16 +20,5 @@ namespace GcodeLibrary
             _value = parameter;
         }
 
-        public int Value
-        {
-            get
-            {
-                return ((int)_value);
-            }
-            set
-            {
-                _value = value;
-            }
-        }
     }
 }

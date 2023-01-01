@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using ShapeLibrary;
 using DXFLibrary;
 
-namespace GcodeConsole
+namespace GcodeCreator
 {
     class Program
     {
