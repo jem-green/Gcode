@@ -8,7 +8,7 @@ namespace GcodeLibrary
 {
     public class Dwell : Code
     {
-        #region Varaibles
+        #region Fields
         #endregion
         #region Constructors
 

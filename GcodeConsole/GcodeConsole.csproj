@@ -1,33 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\GcodeLibrary\GcodeLibrary.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Reference Include="DXFLibrary">
-      <HintPath>..\..\DXF\DXFLibrary\bin\Debug\netcoreapp3.1\DXFLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\DXF\netcoreapp3.1\DXFLibrary.dll</HintPath>
     </Reference>
     <Reference Include="ShapeLibrary">
-      <HintPath>..\ThirdParty\ShapeLibrary\ShapeLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\shape\netcoreapp3.1\ShapeLibrary.dll</HintPath>
     </Reference>
     <Reference Include="TracerLibrary">
-      <HintPath>..\ThirdParty\TracerLibrary\netcoreapp3.1\TracerLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\tracer\net6.0\TracerLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
-
   <ItemGroup>
-    <None Update="test.dwg.dxf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="test.dxf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
 </Project>

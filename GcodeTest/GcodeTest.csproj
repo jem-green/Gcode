@@ -1,16 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-
-    <IsPackable>false</IsPackable>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
-    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+    <ProjectReference Include="..\GcodeLibrary\GcodeLibrary.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Reference Include="DXFLibrary">
+      <HintPath>..\ThirdParty\DXF\netcoreapp3.1\DXFLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ShapeLibrary">
+      <HintPath>..\ThirdParty\shape\netcoreapp3.1\ShapeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="TracerLibrary">
+      <HintPath>..\ThirdParty\tracer\net6.0\TracerLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="test.dwg.dxf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test.dxf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

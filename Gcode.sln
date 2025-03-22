@@ -9,10 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcodeLibrary", "GcodeLibrar
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Thirdparty", "Thirdparty", "{8AB18983-7253-464A-8BAF-0D1E06327186}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShapeLibrary", "ShapeLibrary", "{3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3}"
-	ProjectSection(SolutionItems) = preProject
-		ThirdParty\ShapeLibrary\ShapeLibrary.dll = ThirdParty\ShapeLibrary\ShapeLibrary.dll
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shape", "Shape", "{3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tracer", "Tracer", "{A73D01CA-8961-42FD-BA80-190249A6C53D}"
 EndProject
@@ -28,12 +25,33 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net452", "net452", "{C190AD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GcodeTest", "GcodeTest\GcodeTest.csproj", "{BD7448FD-7677-435E-BAE6-E853E37B03E5}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DXFLibrary", "DXFLibrary", "{C36FA11D-B9AB-48D8-B082-128F89E7B813}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DXF", "DXF", "{C36FA11D-B9AB-48D8-B082-128F89E7B813}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp3.1", "netcoreapp3.1", "{C7A50B33-DE84-46FE-8283-44E5402A96C6}"
 	ProjectSection(SolutionItems) = preProject
-		ThirdParty\DXFLibrary\netcoreapp3.1\DXFLibrary.dll = ThirdParty\DXFLibrary\netcoreapp3.1\DXFLibrary.dll
-		ThirdParty\DXFLibrary\netcoreapp3.1\LoggerLibrary.dll = ThirdParty\DXFLibrary\netcoreapp3.1\LoggerLibrary.dll
+		ThirdParty\DXF\netcoreapp3.1\DXFLibrary.deps.json = ThirdParty\DXF\netcoreapp3.1\DXFLibrary.deps.json
+		ThirdParty\DXF\netcoreapp3.1\DXFLibrary.dll = ThirdParty\DXF\netcoreapp3.1\DXFLibrary.dll
+		ThirdParty\DXF\netcoreapp3.1\DXFLibrary.pdb = ThirdParty\DXF\netcoreapp3.1\DXFLibrary.pdb
+		ThirdParty\DXF\netcoreapp3.1\TracerLibrary.dll = ThirdParty\DXF\netcoreapp3.1\TracerLibrary.dll
+		ThirdParty\DXF\netcoreapp3.1\TracerLibrary.pdb = ThirdParty\DXF\netcoreapp3.1\TracerLibrary.pdb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net6.0", "net6.0", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net6.0", "net6.0", "{EC850049-0872-4177-B4B7-AD6CC61D4423}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net6.0", "net6.0", "{84F6596A-B149-4F48-91F0-EA1A555757C0}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\tracer\net6.0\TracerLibrary.deps.json = ThirdParty\tracer\net6.0\TracerLibrary.deps.json
+		ThirdParty\tracer\net6.0\TracerLibrary.dll = ThirdParty\tracer\net6.0\TracerLibrary.dll
+		ThirdParty\tracer\net6.0\TracerLibrary.pdb = ThirdParty\tracer\net6.0\TracerLibrary.pdb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp3.1", "netcoreapp3.1", "{FFFBDD51-8E07-4B05-B58E-C38E83D54015}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\shape\netcoreapp3.1\ShapeLibrary.deps.json = ThirdParty\shape\netcoreapp3.1\ShapeLibrary.deps.json
+		ThirdParty\shape\netcoreapp3.1\ShapeLibrary.dll = ThirdParty\shape\netcoreapp3.1\ShapeLibrary.dll
+		ThirdParty\shape\netcoreapp3.1\ShapeLibrary.pdb = ThirdParty\shape\netcoreapp3.1\ShapeLibrary.pdb
 	EndProjectSection
 EndProject
 Global
@@ -65,6 +83,10 @@ Global
 		{C190ADE0-8262-4A0F-9614-44D1F48A84A9} = {A73D01CA-8961-42FD-BA80-190249A6C53D}
 		{C36FA11D-B9AB-48D8-B082-128F89E7B813} = {8AB18983-7253-464A-8BAF-0D1E06327186}
 		{C7A50B33-DE84-46FE-8283-44E5402A96C6} = {C36FA11D-B9AB-48D8-B082-128F89E7B813}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {C36FA11D-B9AB-48D8-B082-128F89E7B813}
+		{EC850049-0872-4177-B4B7-AD6CC61D4423} = {3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3}
+		{84F6596A-B149-4F48-91F0-EA1A555757C0} = {A73D01CA-8961-42FD-BA80-190249A6C53D}
+		{FFFBDD51-8E07-4B05-B58E-C38E83D54015} = {3C4CD2C4-8D9A-43A4-9D41-242D7EBC2AB3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BF45AD84-C37E-4FD1-89D7-A47176A69D35}

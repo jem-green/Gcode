@@ -14,15 +14,15 @@ namespace GcodeLibrary
             B = 1,      // B rotational axis around y axis
             C = 2,      // C rotational axis around z axis
             D = 3,      // D tool radius compensation
-            E = 4,      // E Precision feedrate
+            E = 4,      // E Precision feed rate
             F = 5,      // F Feed rate
-            G = 6,      // G Preparitory
+            G = 6,      // G Preparatory
             H = 7,      // H Tool length offset
             I = 8,      // I Arc center in x axis 
             J = 9,      // J Arc center in y axis
             K = 10,     // K arc center in z axis
             L = 11,     // L repetitions in canned cycles
-            M = 12,     // M Miscelanious
+            M = 12,     // M Miscellaneous
             N = 13,     // N Line Number
             O = 14,     // O dwell time in canned cycles
             P = 15,     // P Parameter
@@ -33,9 +33,9 @@ namespace GcodeLibrary
             U = 20,     // U Incremental axis corresponding to x axis
             V = 21,     // V Incremental axis corresponding to y axis
             W = 22,     // W Incremental axis corresponding to z axis
-            X = 23,     // X cordinate
-            Y = 24,     // Y cordinate
-            Z = 25,     // Z cordinate
+            X = 23,     // X co-ordinate
+            Y = 24,     // Y co-ordinate
+            Z = 25,     // Z co-ordinate
         }
 
         protected WordType _word = WordType.G;

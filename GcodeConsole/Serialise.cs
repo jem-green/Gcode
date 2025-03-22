@@ -10,7 +10,7 @@ using System.Diagnostics;
 namespace GcodeConsole
 {
     /// <summary>
-    /// Serialise and deserialise confguration data
+    /// Serialise and deserialise configuration data
     /// </summary>
     public class Serialise
     {
