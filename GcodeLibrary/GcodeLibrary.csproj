@@ -4,10 +4,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DXFLibrary">
-      <HintPath>..\ThirdParty\DXF\netcoreapp3.1\DXFLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\DXF\net6.0\DXFLibrary.dll</HintPath>
     </Reference>
     <Reference Include="ShapeLibrary">
-      <HintPath>..\ThirdParty\shape\netcoreapp3.1\ShapeLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\shape\net6.0\ShapeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="TracerLibrary">
+      <HintPath>..\ThirdParty\tracer\net6.0\TracerLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

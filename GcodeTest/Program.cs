@@ -11,10 +11,10 @@ namespace GcodeTest
         static void Main(string[] args)
         {
 
-            GcodeDocument gc = new GcodeDocument();
+            GcodeLibrary.Document gc = new GcodeLibrary.Document();
             gc.Add(new Dwell(150));
-            gc.Add(new RapidMove(new Point(0, 0, 5), new Point(10, 10, 0)));
-            gc.Add(new LinearMove(new Point(0, 0, 0), new Point(10, 10, 0)));
+            gc.Add(new RapidMove(new ShapeLibrary.Point(0, 0, 5), new ShapeLibrary.Point(10, 10, 0)));
+            gc.Add(new LinearMove(new ShapeLibrary.Point(0, 0, 0), new ShapeLibrary.Point(10, 10, 0)));
 
             foreach (Code code in gc)
             {
@@ -25,11 +25,11 @@ namespace GcodeTest
 
             Console.WriteLine(gc.ToString());
 
-            DXFLibrary.DXFDocument dXFDocument = new DXFDocument();
-            dXFDocument.Load("test.dwg");
-
+            DXFLibrary.Document dXFDocument = new DXFLibrary.Document();
+            dXFDocument.Load("test.dwg"); // Adds on the extra .dxf so test.dwg.dxf
             Gcode gcode = new Gcode();
             gc = gcode.FromDXF(dXFDocument);
+            
 
         }
     }

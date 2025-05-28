@@ -6,7 +6,7 @@ namespace GcodeLibrary
 {
     public class Gcode
     {
-        public GcodeDocument FromDXF(DXFDocument document)
+        public Document FromDXF(DXFLibrary.Document document)
         {
 
             List<object> items = new List<object>();
@@ -16,19 +16,19 @@ namespace GcodeLibrary
             // The class structure needs to store the full co-ordinates
             // but only output the gcode with the differences
 
-            foreach (DXFEntity entity in document.Entities)
+            foreach (DXFLibrary.Entity entity in document.Entities)
             {
-                if (entity.GetType() == typeof(DXFLine))
+                if (entity.GetType() == typeof(DXFLibrary.Line))
                 {
-                    DXFLine dxfLine = (DXFLine)entity;
-                    Point from = new Point(dxfLine.Start.X.Value, dxfLine.Start.Y.Value, dxfLine.Start.Z.Value);
-                    Point to = new Point(dxfLine.End.X.Value, dxfLine.End.Y.Value, dxfLine.End.Z.Value);
-                    Line line = new Line(from, to);
+                    DXFLibrary.Line dxfLine = (DXFLibrary.Line)entity;
+                    ShapeLibrary.Point from = new ShapeLibrary.Point(dxfLine.Start.X.Value, dxfLine.Start.Y.Value, dxfLine.Start.Z.Value);
+                    ShapeLibrary.Point to = new ShapeLibrary.Point(dxfLine.End.X.Value, dxfLine.End.Y.Value, dxfLine.End.Z.Value);
+                    ShapeLibrary.Line line = new ShapeLibrary.Line(from, to);
                     items.Add(line);
                 }
             }
 
-            GcodeDocument gcodeDocument = new GcodeDocument();
+            Document gcodeDocument = new Document();
 
             //foreach (DXFEntity entity in document.Entities)
             //{
@@ -46,7 +46,7 @@ namespace GcodeLibrary
             return (gcodeDocument);
         }
 
-        public GcodeDocument FromHPGL2(DXFDocument document)
+        public Document FromHPGL2(DXFLibrary.Document document)
         {
 
             List<object> items = new List<object>();
@@ -56,19 +56,19 @@ namespace GcodeLibrary
             // The class structure needs to store the full co-ordinates
             // but only output the gcode with the differences
 
-            foreach (DXFEntity entity in document.Entities)
+            foreach (DXFLibrary.Entity entity in document.Entities)
             {
-                if (entity.GetType() == typeof(DXFLine))
+                if (entity.GetType() == typeof(DXFLibrary.Line))
                 {
-                    DXFLine dxfLine = (DXFLine)entity;
-                    Point from = new Point(dxfLine.Start.X.Value, dxfLine.Start.Y.Value, dxfLine.Start.Z.Value);
-                    Point to = new Point(dxfLine.End.X.Value, dxfLine.End.Y.Value, dxfLine.End.Z.Value);
-                    Line line = new Line(from, to);
+                    DXFLibrary.Line dxfLine = (DXFLibrary.Line)entity;
+                    ShapeLibrary.Point from = new ShapeLibrary.Point(dxfLine.Start.X.Value, dxfLine.Start.Y.Value, dxfLine.Start.Z.Value);
+                    ShapeLibrary.Point to = new ShapeLibrary.Point(dxfLine.End.X.Value, dxfLine.End.Y.Value, dxfLine.End.Z.Value);
+                    ShapeLibrary.Line line = new ShapeLibrary.Line(from, to);
                     items.Add(line);
                 }
             }
 
-            GcodeDocument gcodeDocument = new GcodeDocument();
+            Document gcodeDocument = new Document();
 
             //foreach (DXFEntity entity in document.Entities)
             //{
