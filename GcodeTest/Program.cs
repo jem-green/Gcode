@@ -11,7 +11,7 @@ namespace GcodeTest
         static void Main(string[] args)
         {
 
-            GcodeLibrary.Document gc = new GcodeLibrary.Document();
+            GcodeLibrary.GcodeDocument gc = new GcodeLibrary.GcodeDocument();
             gc.Add(new Dwell(150));
             gc.Add(new RapidMove(new ShapeLibrary.Point(0, 0, 5), new ShapeLibrary.Point(10, 10, 0)));
             gc.Add(new LinearMove(new ShapeLibrary.Point(0, 0, 0), new ShapeLibrary.Point(10, 10, 0)));
@@ -25,7 +25,7 @@ namespace GcodeTest
 
             Console.WriteLine(gc.ToString());
 
-            DXFLibrary.Document dXFDocument = new DXFLibrary.Document();
+            DXFLibrary.DXFDocument dXFDocument = new DXFLibrary.DXFDocument();
             dXFDocument.Load("test.dwg"); // Adds on the extra .dxf so test.dwg.dxf
             Gcode gcode = new Gcode();
             gc = gcode.FromDXF(dXFDocument);

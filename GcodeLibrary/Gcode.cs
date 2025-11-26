@@ -6,7 +6,7 @@ namespace GcodeLibrary
 {
     public class Gcode
     {
-        public Document FromDXF(DXFLibrary.Document document)
+        public GcodeDocument FromDXF(DXFLibrary.DXFDocument document)
         {
 
             List<object> items = new List<object>();
@@ -28,7 +28,7 @@ namespace GcodeLibrary
                 }
             }
 
-            Document gcodeDocument = new Document();
+            GcodeDocument gcodeDocument = new GcodeDocument();
 
             //foreach (DXFEntity entity in document.Entities)
             //{
@@ -46,7 +46,7 @@ namespace GcodeLibrary
             return (gcodeDocument);
         }
 
-        public Document FromHPGL2(DXFLibrary.Document document)
+        public GcodeDocument FromHPGL2(DXFLibrary.DXFDocument document)
         {
 
             List<object> items = new List<object>();
@@ -68,7 +68,7 @@ namespace GcodeLibrary
                 }
             }
 
-            Document gcodeDocument = new Document();
+            GcodeDocument gcodeDocument = new GcodeDocument();
 
             //foreach (DXFEntity entity in document.Entities)
             //{

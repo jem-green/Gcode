@@ -11,7 +11,7 @@ namespace GcodeLibrary
     /// <summary>
     /// Container
     /// </summary>
-    public class Document : IEnumerable<Code>
+    public class GcodeDocument : IEnumerable<Code>
     {
         #region Fields
 
@@ -20,7 +20,7 @@ namespace GcodeLibrary
         #endregion
         #region Constructors
 
-        public Document()
+        public GcodeDocument()
         {
             _codes = new List<Code>();
         }
